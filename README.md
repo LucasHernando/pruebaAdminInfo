@@ -18,6 +18,11 @@ $ php artisan serve
 
 http://localhost:8000/api/login
 
-*** Params
+*** Params Json
 {"email":"exampleUser@example.net", "password":"password"}
 
+http://localhost:8000/api/products
+
+*** Route to list products
+*** Params Json
+{"email":"exampleUser@example.net", "password":"password"}
