@@ -12,24 +12,63 @@ $ php artisan db:seed --class=DatabaseSeeder \
 $ php artisan serve \
 
 
-## Routes
 
-*** Generate Token
+```bash
+curl \
+  -X GET \ 
+```
 
-http://localhost:8000/api/login
+## Login User - POST
+`http://localhost:8000/api/login`
 
-*** Params Json
-{"email":"exampleUser@example.net", "password":"password"}
+content_type:
+```application/json```
+
+body:
+
+Example of required fields to Login User
+```json
+{
+    {"email":"exampleUser@example.net", "password":"password"}
+}
+```
+
+
 
 ```bash
 curl \
   -X GET \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNDU2LCJqdGkiOiJmZDJmOWQ1ZTFhN2M0MmU4OTQ5MzVlMzYyYmNhOGJjYSJ9.NHlztMGER7UADHZJlxNG0WSi22a2KaYSfd1S-AuT7lU" \
-  http://localhost:8000/api/products
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNDU2LCJqdGkiOiJmZDJmOWQ1ZTFhN2M0MmU4OTQ5MzVlMzYyYmNhOGJjYSJ9.NHlztMGER7UADHZJlxNG0WSi22a2KaYSfd1S-AuT7lU" 
+  ```
 
-***Route to list products
+  ## List Products - GET
+  `http://localhost:8000/api/products`
+
+content_type:
+```application/json```
+
+Reponse:
+```json
+{
+	"code": 200,
+	"message": "Return products",
+	"data": [
+		{
+			"id": 4,
+			"code": "PR01",
+			"name": "GASEOSA",
+			"description": "Gaseosa Coca Cola",
+			"amount": 12,
+			"purchase_price": "10000",
+			"sale_price": "20000",
+			"created_at": "2023-11-04T22:05:58.000000Z",
+			"updated_at": "2023-11-04T22:05:58.000000Z"
+		}
+	]
+}
 ```
+
 
 ```bash
 curl \
