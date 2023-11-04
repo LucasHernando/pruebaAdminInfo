@@ -79,7 +79,8 @@ content_type:
 
 body:
 
-Example of required fields to register a User
+Example of required fields to Update a Product \
+In data, the field you enter is dynamic
 ```json
 {   
     "id":"CODEXAMPLE", 
