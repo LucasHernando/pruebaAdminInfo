@@ -21,8 +21,10 @@ http://localhost:8000/api/login
 *** Params Json
 {"email":"exampleUser@example.net", "password":"password"}
 
-http://localhost:8000/api/products
+```bash
+curl \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNDU2LCJqdGkiOiJmZDJmOWQ1ZTFhN2M0MmU4OTQ5MzVlMzYyYmNhOGJjYSJ9.NHlztMGER7UADHZJlxNG0WSi22a2KaYSfd1S-AuT7lU" \
+  http://localhost:8000/api/products
 
 *** Route to list products
 *** Params Json
-{"email":"exampleUser@example.net", "password":"password"}
